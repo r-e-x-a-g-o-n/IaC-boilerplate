@@ -39,19 +39,26 @@ The assignment part is where an instructor creates problems for students as home
 	In one problem, it can have more than one problem cell. For example, one can specify a problem statement in one markdown cell, and put codes with some parts left blank in a code cell for students to fill in. It can also be a code cell where students have to put in a correct choice, number or string into a variable. These cells will be extracted to an assignment notebook and have to be tagged with the following comment in the first line.
 	
 		For scala,
-    `// ASSIGNMENT 1, Problem 1, Points 2`
-	For Python,
-    `# ASSIGNMENT 1, Problem 1, Points 2`
+		
+	    `// ASSIGNMENT 1, Problem 1, Points 2`
+    
+		For Python,
+		
+	    `# ASSIGNMENT 1, Problem 1, Points 2`
     > See an example of Problem cell in the template
     
 	- **Test Cell**
 	The Test cell is a cell that an instructor has to put in a code for students to run to check whether their codes or answers in a corresponding problem cell is in a correct format or not, e.g. String, Integer, List of Integer, RDD and so on. In one problem, it can have only one Test cell. The Test cell will be extracted along with problem cells to an assignment notebook and has to be tagged with the following comment in the first line.
 	
 		For scala,
-    `// ASSIGNMENT 1, Test 1, Points 2`
-	For Python,
-    `# ASSIGNMENT 1, Test 1, Points 2`
-    > See an example of Test cell in the template
+		
+	    `// ASSIGNMENT 1, Test 1, Points 2`
+	    
+		For Python,
+		
+	    `# ASSIGNMENT 1, Test 1, Points 2`
+	    
+	    > See an example of Test cell in the template
     	
 	- **TEST Cell**
 		The TEST cell is a cell where an instructor has to put test cases, or correct answers for variables. The instructior has to write a code to check whether students' codes satisfy all test cases or students' answers are correct and adjust scores accordingly. In one problem, it can have only one TEST cell. The TEST cell will be appended to students' submission notebooks when grading. The TEST cell has to be tagged with the following comment in the first line.
@@ -75,9 +82,12 @@ The assignment part is where an instructor creates problems for students as home
 		The SOLUTION cell is a cell that an instructor puts correct codes or answers just for a reference. In one problem, it can have only one SOLUTION cell. The SOLUTION cell has to be tagged with the following comment in the first line.
 	
 		For scala,
-    `// ASSIGNMENT 1, SOLUTION 1, Points 2`
-	For Python,
-    `# ASSIGNMENT 1, SOLUTION 1, Points 2`
+  
+	    `// ASSIGNMENT 1, SOLUTION 1, Points 2`
+
+		For Python,
+		
+	    `# ASSIGNMENT 1, SOLUTION 1, Points 2`
     > See an example of SOLUTION cell in the template
 
 	> **WARNING !!!**
