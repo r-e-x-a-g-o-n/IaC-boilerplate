@@ -12,18 +12,22 @@ One needs to install:-
 
 ## Master Notebook Preparation
 ### Your Course Directory
-Make a new repository for your course, and copy contents inside `TEST_COURSE` repository into your course repository. In `TEST_COURSE` repository, you will find all related files and directories needed for the notebook extraction. Put your course repository beside the repositories of `AssignmentNotebook`, `Autograder`, `StudiumInterface`, etc.  
+1. Clone `test_course` repository. Put it beside the repositories of `AssignmentNotebook`, `Autograder`, `StudiumInterface`, etc.
+2. Rename it to your course name.
 
 ### Master Notebook Creation
 To create a master notebook, please see examples of master notebooks and read the description in the section below:- 
 
-- See `Example_databricks.dbc` for an example of a databricks master notebook
-- Use `Example_Jupyter.ipynb` for an example of a Jupyter master notebook
+- See `Example_databricks_1.dbc` and `Example_databricks_2.dbc` in `master/db` directory for examples of databricks master notebooks
+
+- See `Example_Jupyter_1.ipynb` and `Example_Jupyter_2.ipynb` in `master/jp` directory for examples of Jupyter master notebooks
 
 > **NOTE !**
 > The construction of a master notebook for both databricks and Jupyter is the same. The difference is just the file format.
 
-> For databricks notebook, one may use magic line (`%python` or `%scala`) as desired to switch between languages in a single notebook. **However, for Jupyter notebook, do not put `%python` in any cells of Jupyter notebook; otherwise, the master notebook cannot be extracted.** Actually, as it only supports Python language (with SageMath kernel), there is no need to put `%python` in any cells anyway. 
+> One may put problems in an assignment in different master notebooks.
+
+> For databricks notebook, one may use magic line (`%python` or `%scala`) as desired to switch between languages in a single notebook. **However, for Jupyter notebook, do not put `%python` in any cells of Jupyter notebook; otherwise, the master notebook cannot be extracted.** Actually, as Jupyter notebook only supports Python language (with SageMath kernel), there is no need to put `%python` in any cells anyway. 
 
 > All master notebooks have to be extracted into lecture and assignment notebooks using our system; otherwise, the student submission notebooks cannot be graded in our system !
 
@@ -45,7 +49,7 @@ The assignment part is where an instructor creates problems for students as home
 		For Python,
 		
 	    `# ASSIGNMENT 1, Problem 1, Points 2`
-    > See an example of Problem cell in the template
+    > See an example of Problem cell in the example notebooks
     
 	- **Test Cell**
 	The Test cell is a cell that an instructor has to put in a code for students to run to check whether their codes or answers in a corresponding problem cell is in a correct format or not, e.g. String, Integer, List of Integer, RDD and so on. In one problem, it can have only one Test cell. The Test cell will be extracted along with problem cells to an assignment notebook and has to be tagged with the following comment in the first line.
@@ -58,7 +62,7 @@ The assignment part is where an instructor creates problems for students as home
 		
 	    `# ASSIGNMENT 1, Test 1, Points 2`
 	    
-	    > See an example of Test cell in the template
+	    > See an example of Test cell in the example notebooks
     	
 	- **TEST Cell**
 		The TEST cell is a cell where an instructor has to put test cases, or correct answers for variables. The instructior has to write a code to check whether students' codes satisfy all test cases or students' answers are correct and adjust scores accordingly. In one problem, it can have only one TEST cell. The TEST cell will be appended to students' submission notebooks when grading. The TEST cell has to be tagged with the following comment in the first line.
@@ -75,7 +79,7 @@ The assignment part is where an instructor creates problems for students as home
     > **NOTE !**
     In every TEST cell, it is necessary to initialize a `local_points` variable to 0, and if the student answer is correct, then add  up a point to this variable, e.g. `local_points = local_points + 2` (in case it is worth 2 points).
     
-    > See an example of TEST cell in the template
+    > See an example of TEST cell in the example notebooks
     
     
 	- **SOLUTION Cell**
@@ -88,7 +92,7 @@ The assignment part is where an instructor creates problems for students as home
 		For Python,
 		
 	    `# ASSIGNMENT 1, SOLUTION 1, Points 2`
-    > See an example of SOLUTION cell in the template
+    > See an example of SOLUTION cell in the example notebooks
 
 	> **WARNING !!!**
 	> Don't be confused between **Test** and **TEST** cells !!!
